@@ -1,31 +1,76 @@
 <template>
-  <header class="container mx-auto mt-6 px-4 flex justify-between items-center"><!-- Start Header -->
-    <div class="">
-      <a href="/" class=""><img src="/img/logo.svg" alt="Logo"></a>
+  <nav>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex-shrink-0">
+          <a href="/" class=""><img src="/img/logo.svg" alt="Logo"></a>
+        </div>
+        <div class="flex items-center">
+
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-6">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <router-link :exact-active-class="active ? 'bg-gray-900' : ''" class=" px-3 py-2 rounded-md text-sm font-medium" to="/">
+                Features
+              </router-link>
+              <router-link :exact-active-class="active ? 'bg-gray-900' : ''" class=" px-3 py-2 rounded-md text-sm font-medium" to="/about">
+                Prices
+              </router-link>
+              <router-link :exact-active-class="active ? 'bg-gray-900' : ''" class=" px-3 py-2 rounded-md text-sm font-medium" to="/about">
+                About
+              </router-link>
+              <router-link :exact-active-class="active ? 'bg-gray-900' : ''" class=" px-3 py-2 rounded-md text-sm font-medium" to="/about">
+                Contacts
+              </router-link>
+              <button class="bg-green-600 hover:bg-green-700 transition-colors duration-300 py-2.5 px-5 rounded-lg text-white font-semibold">Get Started</button>
+
+            </div>
+          </div>
+        </div>
+        <div class="-mr-2 flex md:hidden">
+          <!-- Mobile menu button -->
+          <button type="button" @click="showMenu = !showMenu" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Heroicon name: outline/menu
+
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
-    <div class="flex items-center">
-      <div class="hidden md:block space-x-6 font-medium">
-        <a href="#0" class="hover:text-green-700 transition-colors duration-200">Features</a>
-        <a href="#0" class="hover:text-green-700 transition-colors duration-200">Prices</a>
-        <a href="#0" class="hover:text-green-700 transition-colors duration-200">About</a>
-        <a href="#0" class="hover:text-green-700 transition-colors duration-200">Contacts</a>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="md:hidden" v-if="showMenu" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <router-link to="/" :exact-active-class="active ? 'bg-gray-900' : ''" class=" block px-3 py-2 rounded-md text-base font-medium">
+          Features
+        </router-link>
+        <router-link to="/about" :exact-active-class="active ? 'bg-gray-900' : ''" class=" block px-3 py-2 rounded-md text-base font-medium">
+          Prices
+        </router-link>
+        <router-link to="/about" :exact-active-class="active ? 'bg-gray-900' : ''" class=" block px-3 py-2 rounded-md text-base font-medium">
+          About
+        </router-link>
+        <router-link to="/about" :exact-active-class="active ? 'bg-gray-900' : ''" class=" block px-3 py-2 rounded-md text-base font-medium">
+          Contacts
+        </router-link>
         <button class="bg-green-600 hover:bg-green-700 transition-colors duration-300 py-2.5 px-5 rounded-lg text-white font-semibold">Get Started</button>
       </div>
-      <div class="md:hidden">
-        <a href="#0" class="">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </a>
-      </div>
     </div>
-  </header>
+  </nav>
 </template>
 <script>
 export default {
   data() {
     return {
-      showMenu: false
+      showMenu: false,
+      active: false
     }
   },
   methods: {
