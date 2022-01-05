@@ -10,19 +10,15 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-6">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <router-link :exact-active-class="active ? 'bg-gray-900' : ''" class=" px-3 py-2 rounded-md text-sm font-medium" to="/">
-                Features
-              </router-link>
-              <router-link :exact-active-class="active ? 'bg-gray-900' : ''" class=" px-3 py-2 rounded-md text-sm font-medium" to="/about">
-                Prices
-              </router-link>
-              <router-link :exact-active-class="active ? 'bg-gray-900' : ''" class=" px-3 py-2 rounded-md text-sm font-medium" to="/about">
-                About
-              </router-link>
-              <router-link :exact-active-class="active ? 'bg-gray-900' : ''" class=" px-3 py-2 rounded-md text-sm font-medium" to="/about">
-                Contacts
-              </router-link>
-              <button class="bg-green-600 hover:bg-green-700 transition-colors duration-300 py-2.5 px-5 rounded-lg text-white font-semibold">Get Started</button>
+              <nuxt-link :exact-active-class="active ? 'bg-gray-900' : ''" class=" px-3 py-2 rounded-md text-sm font-medium" to="/">
+                Home
+              </nuxt-link>
+              <nuxt-link :exact-active-class="active ? 'bg-gray-900' : ''" class=" px-3 py-2 rounded-md text-sm font-medium" to="/about">
+                Sobre
+              </nuxt-link>
+              <nuxt-link :exact-active-class="active ? 'bg-gray-900' : ''" class=" px-3 py-2 rounded-md text-sm font-medium" to="/contact">
+                Contato
+              </nuxt-link>
 
             </div>
           </div>
@@ -48,19 +44,15 @@
     <div class="md:hidden" v-if="showMenu" id="mobile-menu">
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <router-link to="/" :exact-active-class="active ? 'bg-gray-900' : ''" class=" block px-3 py-2 rounded-md text-base font-medium">
-          Features
-        </router-link>
-        <router-link to="/about" :exact-active-class="active ? 'bg-gray-900' : ''" class=" block px-3 py-2 rounded-md text-base font-medium">
-          Prices
-        </router-link>
-        <router-link to="/about" :exact-active-class="active ? 'bg-gray-900' : ''" class=" block px-3 py-2 rounded-md text-base font-medium">
-          About
-        </router-link>
-        <router-link to="/about" :exact-active-class="active ? 'bg-gray-900' : ''" class=" block px-3 py-2 rounded-md text-base font-medium">
-          Contacts
-        </router-link>
-        <button class="bg-green-600 hover:bg-green-700 transition-colors duration-300 py-2.5 px-5 rounded-lg text-white font-semibold">Get Started</button>
+        <nuxt-link to="/" :exact-active-class="active ? 'bg-gray-900' : ''" class=" block px-3 py-2 rounded-md text-base font-medium">
+          Home
+        </nuxt-link>
+        <nuxt-link to="/about" :exact-active-class="active ? 'bg-gray-900' : ''" class=" block px-3 py-2 rounded-md text-base font-medium">
+          Sobre
+        </nuxt-link>
+        <nuxt-link to="/contact" :exact-active-class="active ? 'bg-gray-900' : ''" class=" block px-3 py-2 rounded-md text-base font-medium">
+          Contato
+        </nuxt-link>
       </div>
     </div>
   </nav>

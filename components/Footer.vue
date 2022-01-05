@@ -6,10 +6,9 @@
         <a href="/" class=""><img src="/img/logo.svg" alt="Logo"></a>
       </div>
       <div class="flex md:justify-center flex-1 space-x-6 font-medium">
-        <a href="#0" class="hover:text-green-700 transition-colors duration-200">Features</a>
-        <a href="#0" class="hover:text-green-700 transition-colors duration-200">Prices</a>
-        <a href="#0" class="hover:text-green-700 transition-colors duration-200">About</a>
-        <a href="#0" class="hover:text-green-700 transition-colors duration-200">Contacts</a>
+        <a href="#0" class="hover:text-green-700 transition-colors duration-200">Home</a>
+        <a href="#0" class="hover:text-green-700 transition-colors duration-200">Sobre</a>
+        <a href="#0" class="hover:text-green-700 transition-colors duration-200">Contato</a>
       </div>
       <div class="flex md:justify-end flex-1 space-x-4">
         <a href="">
