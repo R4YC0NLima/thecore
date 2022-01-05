@@ -3,8 +3,6 @@
     <Navbar />
 
     <Main></Main>
-    <div class="fb-customerchat" page_id="101906755311619">
-    </div>
     <Footer />
   </main>
 </template>
