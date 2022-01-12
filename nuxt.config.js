@@ -40,8 +40,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/dotenv',
-    '@nuxtjs/fontawesome',
+    '@nuxtjs/dotenv'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -55,11 +54,7 @@ export default {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',
   },
-  fontawesome: {
-    icons: {
-      solid: true
-    }
-  },
+
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
