@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <div class="flex-shrink-0">
-          <a href="/" class=""><img src="/img/logo.svg" alt="Logo"></a>
+          <nuxt-link to="/" class=""><img src="/img/logo.svg" alt="Logo"></nuxt-link>
         </div>
         <div class="flex items-center">
 
@@ -16,9 +16,12 @@
               <nuxt-link :exact-active-class="active ? 'bg-gray-900' : ''" class=" px-3 py-2 rounded-md text-sm font-medium" to="/about">
                 Sobre
               </nuxt-link>
-              <a href="#orcamento" class="px-3 py-2 rounded-md text-sm font-medium">
-                Orçamento
-              </a>
+              <nuxt-link :exact-active-class="active ? 'bg-gray-900' : ''" class=" px-3 py-2 rounded-md text-sm font-medium" to="/produtos">
+                Produtos
+              </nuxt-link>
+              <nuxt-link :exact-active-class="active ? 'bg-gray-900' : ''" class=" px-3 py-2 rounded-md text-sm font-medium" to="/contatos">
+                Contatos
+              </nuxt-link>
 
             </div>
           </div>
@@ -50,9 +53,12 @@
         <nuxt-link to="/about" :exact-active-class="active ? 'bg-gray-900' : ''" class=" block px-3 py-2 rounded-md text-base font-medium">
           Sobre
         </nuxt-link>
-        <a href="#orcamento" class="bg-green-600 hover:bg-green-700 transition-colors duration-300 py-2.5 px-5 rounded-lg text-white font-semibold">
-          Orçamento
-        </a>
+        <nuxt-link to="/produtos" :exact-active-class="active ? 'bg-gray-900' : ''" class=" block px-3 py-2 rounded-md text-base font-medium">
+          Produtos
+        </nuxt-link>
+        <nuxt-link to="/contatos" :exact-active-class="active ? 'bg-gray-900' : ''" class=" block px-3 py-2 rounded-md text-base font-medium">
+          Contatos
+        </nuxt-link>
       </div>
     </div>
   </nav>

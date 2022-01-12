@@ -8,16 +8,14 @@
             <div class="w-full lg:w-1/2 mb-16 lg:mb-0 flex">
               <div class="w-full lg:w-1/2 px-6">
                 <ul>
-                  <li><a class="focus:outline-none focus:underline  text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50">Home</a></li>
-                  <li class="mt-6"><a class="focus:outline-none focus:underline text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50">Sobre</a></li>
-                  <li class="mt-6"><a class="focus:outline-none focus:underline text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50">Contato</a></li>
+                  <li><nuxt-link to="/" class="focus:outline-none focus:underline  text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50">Home</nuxt-link></li>
+                  <li class="mt-6"><nuxt-link to="about" class="focus:outline-none focus:underline text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50">Sobre</nuxt-link></li>
+                  <li class="mt-6"><nuxt-link to="contact" class="focus:outline-none focus:underline text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50">Contato</nuxt-link></li>
                 </ul>
               </div>
               <div class="w-full lg:w-1/2 px-6">
                 <ul>
-                  <li><a class="focus:outline-none focus:underline text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50">Free components</a></li>
-                  <li class="mt-6"><a class="focus:outline-none focus:underline text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50">Blog</a></li>
-                  <li class="mt-6"><a class="focus:outline-none focus:underline text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50">Changelog</a></li>
+                  <li><nuxt-link to="produtos" class="focus:outline-none focus:underline text-xs lg:text-sm leading-none hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50">Produtos</nuxt-link></li>
                 </ul>
               </div>
             </div>
